@@ -30,5 +30,9 @@ f_OCnx = -------------------------
     OCR0A = 99;
 4.3)
     TCCR0B |= 0b00000010;
-    OCR0A = 199; 
+    OCR0A = 199;
+
+5)
+Dann blinkt die Led um den Faktor 10000 mal schneller
+PIND |= _BV(PIND6);
 

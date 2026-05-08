@@ -60,7 +60,7 @@ ISR(TIMER0_COMPA_vect) {
   static unsigned short int count_overlow = 0;
   count_overlow++;
   if (count_overlow == 10000) {
-    PIND |= _BV(PIND7);
+    PIND |= _BV(PIND6);
     count_overlow = 0;
   }
 }
