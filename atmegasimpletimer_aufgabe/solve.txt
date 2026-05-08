@@ -33,6 +33,7 @@ f_OCnx = -------------------------
     OCR0A = 199;
 
 5)
-Dann blinkt die Led um den Faktor 10000 mal schneller
+Dann blinkt die Led um den Faktor 10000 mal schneller ohne die if Abfrage
+Das ist notwendig da man ansonsten kaum sieht wie die led blinkt.
 PIND |= _BV(PIND6);
 
