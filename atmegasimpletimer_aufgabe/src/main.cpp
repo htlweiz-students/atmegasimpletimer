@@ -27,21 +27,22 @@ int main() {
   TCCR0A |= _BV(WGM01);
 
   // Prescaler auf clk/64
-  TCCR0B |= _BV(CS00);
-  TCCR0B |= _BV(CS01);
+  TCCR0B |= 0b00000010; 
+
+  
 
   // Counter auf null setzen
   TCNT0 = 0;
 
   // erst mal auf Null setzen.
-  TIMSK0 = 0;
+  TIMSK0 = 99;
 
   // Interrups für den Overflow setzen. (Immer nur bei erreichen des TOPS wird
   // ausgelöst.)
   TIMSK0 |= _BV(OCIE0A);
 
   // bei erreichen von 28 wird der interrupt ausgelöst und der counter resettet
-  OCR0A = 127;
+  OCR0A = 199;
 
   // interrupts wieder einschalten
   sei();
